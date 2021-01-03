@@ -5,21 +5,24 @@ package com.renaldysabdo.basicandroid
 import android.content.Context
 import android.preference.PreferenceManager
 import androidx.core.content.edit
+import me.ibrahimsn.library.LiveSharedPreferences
+
+
+const val USER_NAME_KEY = "USER_NAME"
+const val USER_AGE_KEY = "USER_AGE"
 
 class ResourceManagement(context: Context) {
-    companion object{
-        private const val USER_NAME_KEY = "USER_NAME"
-        private const val USER_AGE_KEY = "USER_AGE"
-    }
 
     val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
+    val liveSharedPreferences = LiveSharedPreferences(sharedPreferences)
 
-    var username : String
-        get() = sharedPreferences.getString(USER_NAME_KEY, "") ?: ""
-        set(value) = sharedPreferences.edit { putString(USER_NAME_KEY, value) }
+    fun setUserName(name: String) {
+        sharedPreferences.edit { putString(USER_NAME_KEY, name) }
+    }
 
-    var age : String
-        get() = sharedPreferences.getString(USER_AGE_KEY, "") ?: ""
-        set(value) = sharedPreferences.edit { putString(USER_AGE_KEY, value) }
-
+    fun setUserAge(age: String){
+        sharedPreferences.edit { putString(USER_AGE_KEY, age) }
+    }
 }
+
+

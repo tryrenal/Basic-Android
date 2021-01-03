@@ -1,5 +1,6 @@
 package com.renaldysabdo.basicandroid
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -10,6 +11,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var resource : ResourceManagement
     private lateinit var binding : ActivityMainBinding
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -22,20 +24,16 @@ class MainActivity : AppCompatActivity() {
             val username = binding.etUsername.text.toString()
             val age = binding.etAge.text.toString()
 
-            resource.username = username
-            resource.age = age
-        }
+            resource.setUserName(username)
+            resource.setUserAge(age)
 
-        binding.btnShowData.setOnClickListener {
-            val username : String = resource.username
-            val age : String = resource.age
-
-            val textGreeting = "Hello, $username your age : $age"
-
-            with(binding.textResult){
-                visibility = View.VISIBLE
-                text = textGreeting
-            }
+            //get value
+            resource.liveSharedPreferences.listenMultiple(listOf(USER_NAME_KEY, USER_AGE_KEY), "").observe(this, {
+                with(binding.textResult){
+                    visibility = View.VISIBLE
+                    text = "hallo ${it[USER_NAME_KEY]}, your age : ${it[USER_AGE_KEY]}"
+                }
+            })
         }
 
     }
