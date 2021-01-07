@@ -10,9 +10,13 @@ import android.provider.MediaStore
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
+import com.bumptech.glide.Glide
 import com.renaldysabdo.basicandroid.databinding.ActivityMainBinding
 import com.renaldysabdo.basicandroid.other.PickImage
 import com.renaldysabdo.basicandroid.other.StatusImage
+import id.zelory.compressor.Compressor
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import java.io.File
 
 
@@ -68,12 +72,22 @@ class MainActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == Activity.RESULT_OK){
             if (requestCode == 1){
-                val takenPhoto = BitmapFactory.decodeFile(filePhoto.absolutePath)
-                binding.imgvPreview.setImageBitmap(takenPhoto)
+                GlobalScope.launch {
+                    val compressImage = Compressor.compress(this@MainActivity, File(filePhoto.absolutePath))
+                    showImage(compressImage)
+                }
             }
             else if (requestCode == 2){
                 binding.imgvPreview.setImageURI(data?.data)
             }
+        }
+    }
+
+    private fun showImage(image: File){
+        runOnUiThread {
+            Glide.with(this)
+                    .load(image)
+                    .into(binding.imgvPreview)
         }
     }
 
