@@ -3,4 +3,5 @@
     <string name="def">Default</string>
     <string name="night">Night</string>
     <string name="light">Light</string>
+    <string name="hello">Hello</string>
 </resources>
