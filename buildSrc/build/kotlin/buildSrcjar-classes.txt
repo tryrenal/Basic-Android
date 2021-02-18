@@ -1,0 +1,1 @@
+/Users/renaldy/androidProjects/BasicAndroid/buildSrc/build/classes/kotlin/main/Libraries.class:/Users/renaldy/androidProjects/BasicAndroid/buildSrc/build/classes/kotlin/main/Versions.class
