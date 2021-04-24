@@ -33,5 +33,12 @@ class MainActivity : AppCompatActivity() {
                     this, R.anim.fade_in
             ))
         }
+
+        val btnFadeOut = findViewById<Button>(R.id.btnFadeOut)
+        btnFadeOut.setOnClickListener {
+            imageLogo.startAnimation(AnimationUtils.loadAnimation(
+                    this, R.anim.fade_out
+            ))
+        }
     }
 }
