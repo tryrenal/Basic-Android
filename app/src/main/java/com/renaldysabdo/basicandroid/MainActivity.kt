@@ -82,5 +82,12 @@ class MainActivity : AppCompatActivity() {
                     this, R.anim.zoom_fade_out
             ))
         }
+
+        val btnRotate = findViewById<Button>(R.id.btnRotate)
+        btnRotate.setOnClickListener {
+            imageLogo.startAnimation(AnimationUtils.loadAnimation(
+                    this, R.anim.rotate
+            ))
+        }
     }
 }
