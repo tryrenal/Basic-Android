@@ -68,5 +68,19 @@ class MainActivity : AppCompatActivity() {
                     this, R.anim.slide_up
             ))
         }
+
+        val btnZoomFadeIn = findViewById<Button>(R.id.btnZoomInFadeIn)
+        btnZoomFadeIn.setOnClickListener {
+            imageLogo.startAnimation(AnimationUtils.loadAnimation(
+                    this, R.anim.zoom_fade_in
+            ))
+        }
+
+        val btnZoomFadeOut = findViewById<Button>(R.id.btnZoomOutFadeOut)
+        btnZoomFadeOut.setOnClickListener {
+            imageLogo.startAnimation(AnimationUtils.loadAnimation(
+                    this, R.anim.zoom_fade_out
+            ))
+        }
     }
 }
