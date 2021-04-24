@@ -89,5 +89,12 @@ class MainActivity : AppCompatActivity() {
                     this, R.anim.rotate
             ))
         }
+
+        val btnMove = findViewById<Button>(R.id.btnMove)
+        btnMove.setOnClickListener {
+            imageLogo.startAnimation(AnimationUtils.loadAnimation(
+                    this, R.anim.move
+            ))
+        }
     }
 }
