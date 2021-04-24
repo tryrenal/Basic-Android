@@ -47,5 +47,12 @@ class MainActivity : AppCompatActivity() {
                     this, R.anim.slide_left
             ))
         }
+
+        val btnSlideRight = findViewById<Button>(R.id.btnSlideRight)
+        btnSlideRight.setOnClickListener {
+            imageLogo.startAnimation(AnimationUtils.loadAnimation(
+                    this, R.anim.slide_right
+            ))
+        }
     }
 }
