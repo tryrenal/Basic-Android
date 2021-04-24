@@ -40,5 +40,12 @@ class MainActivity : AppCompatActivity() {
                     this, R.anim.fade_out
             ))
         }
+
+        val btnSlideLeft = findViewById<Button>(R.id.btnSlideLeft)
+        btnSlideLeft.setOnClickListener {
+            imageLogo.startAnimation(AnimationUtils.loadAnimation(
+                    this, R.anim.slide_left
+            ))
+        }
     }
 }
