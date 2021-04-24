@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Basic Android</string>
+    <string name="zoom_in">Zoom In</string>
+    <string name="zoom_out">Zoom Out</string>
+    <string name="fade_in">Fade In</string>
+    <string name="fade_out">Fade Out</string>
+    <string name="slide_left">Slide Left</string>
+    <string name="slide_right">Slide_Right</string>
+    <string name="slide_up">Slide Up</string>
+    <string name="slide_down">Slide Down</string>
+    <string name="zoom_fade_in"><![CDATA[Zoom & Fade In]]></string>
+    <string name="zoom_fade_out"><![CDATA[Zoom & Fade Out]]></string>
+    <string name="rotate">Rotate</string>
+    <string name="move">Move</string>
 </resources>
