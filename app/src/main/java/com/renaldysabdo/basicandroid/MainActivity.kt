@@ -19,5 +19,12 @@ class MainActivity : AppCompatActivity() {
                     this, R.anim.zoom_in
             ))
         }
+
+        val btnZoomOut = findViewById<Button>(R.id.btnZoomOut)
+        btnZoomOut.setOnClickListener {
+            imageLogo.startAnimation(AnimationUtils.loadAnimation(
+                    this, R.anim.zoom_out
+            ))
+        }
     }
 }
