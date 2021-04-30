@@ -6,6 +6,10 @@
 
     <data>
         <variable
+            name="main"
+            type="com.renaldysabdo.basicandroid.MainActivity" />
+
+        <variable
             name="data"
             type="com.renaldysabdo.basicandroid.model.Data" />
     </data>
@@ -27,6 +31,12 @@
             android:text="@{Integer.toString(data.age)}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="root activity"
+            android:id="@+id/btnToRootActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"/>
 
     </LinearLayout>
 </layout>
