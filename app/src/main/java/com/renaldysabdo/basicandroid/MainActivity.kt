@@ -13,8 +13,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        settingText()
-
+        val data = Data("Renaldy", 23)
+        binding.data = data
     }
 
     private fun settingText(){
