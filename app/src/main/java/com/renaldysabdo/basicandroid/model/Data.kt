@@ -1,4 +1,4 @@
-package com.renaldysabdo.basicandroid
+package com.renaldysabdo.basicandroid.model
 
 data class Data(
     val name: String,

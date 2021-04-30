@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import com.renaldysabdo.basicandroid.databinding.ActivityMainBinding
+import com.renaldysabdo.basicandroid.model.Data
 
 class MainActivity : AppCompatActivity() {
 
