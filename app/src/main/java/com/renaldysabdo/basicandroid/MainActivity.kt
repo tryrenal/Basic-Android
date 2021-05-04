@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val data = Data("renaldy", 16, Date())
+        val data = Data("renaldy", 15, Date())
         binding.data = data
 
         binding.btnToRootActivity.setOnClickListener {
