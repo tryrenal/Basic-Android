@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.renaldysabdo.basicandroid.R
 import com.renaldysabdo.basicandroid.databinding.FragmentHomeBinding
+import com.renaldysabdo.basicandroid.model.Data
+import java.util.*
 
 class HomeFragment : Fragment() {
 
@@ -23,6 +25,8 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val data = Data("redveloper", 23, Date())
+        binding.data = data
         binding.tvGreetingFragment.text = "Redveloper"
     }
 }

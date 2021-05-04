@@ -7,6 +7,7 @@ import android.view.View
 import androidx.databinding.DataBindingUtil
 import com.renaldysabdo.basicandroid.databinding.ActivityMainBinding
 import com.renaldysabdo.basicandroid.model.Data
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val data = Data("renaldy", 16)
+        val data = Data("renaldy", 16, Date())
         binding.data = data
 
         binding.btnToRootActivity.setOnClickListener {

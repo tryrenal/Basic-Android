@@ -3,7 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable
+            name="data"
+            type="com.renaldysabdo.basicandroid.model.Data" />
 
+        <import type="com.renaldysabdo.basicandroid.utils.Helper"/>
     </data>
 
     <LinearLayout
@@ -13,12 +17,11 @@
         android:layout_height="match_parent"
         tools:context=".fragment.HomeFragment">
 
-        <!-- TODO: Update blank fragment layout -->
         <TextView
             android:id="@+id/tvGreetingFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/hello_blank_fragment" />
+            android:text="@{Helper.INSTANCE.convertDateToString(data.date)}" />
 
     </LinearLayout>
 </layout>
