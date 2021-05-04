@@ -13,6 +13,7 @@
             name="data"
             type="com.renaldysabdo.basicandroid.model.Data" />
 
+<!--        tambahkan import for view-->
         <import type="android.view.View"/>
     </data>
 
@@ -27,7 +28,7 @@
             android:id="@+id/tvGreeting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{data.name}" />
+            android:text="@{data.name ?? @string/default_name}" />
 
         <TextView
             android:text="@{Integer.toString(data.age)}"
@@ -36,7 +37,7 @@
 
         <Button
             android:visibility="@{data.age > 10 ? View.GONE : View.VISIBLE, default=visible}"
-            android:text="root activity"
+            android:text="@string/root_activity"
             android:id="@+id/btnToRootActivity"
             android:layout_width="wrap_content"
             android:layout_height="50dp"/>
