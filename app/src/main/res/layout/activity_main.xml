@@ -7,7 +7,7 @@
     <data>
         <variable
             name="main"
-            type="com.renaldysabdo.basicandroid.MainActivity" />
+            type="com.renaldysabdo.basicandroid.activity.MainActivity" />
 
         <variable
             name="data"
@@ -22,7 +22,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".activity.MainActivity">
 
         <TextView
             android:id="@+id/tvGreeting"

@@ -1,10 +1,8 @@
-package com.renaldysabdo.basicandroid
+package com.renaldysabdo.basicandroid.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import androidx.databinding.DataBindingUtil
 import com.renaldysabdo.basicandroid.databinding.ActivityMainBinding
 import com.renaldysabdo.basicandroid.model.Data
 import java.util.*
