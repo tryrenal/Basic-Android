@@ -2,14 +2,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-        <variable
-            name="data"
-            type="com.renaldysabdo.basicandroid.model.Data" />
-
-        <import type="com.renaldysabdo.basicandroid.utils.Helper"/>
-    </data>
-
     <LinearLayout
         android:gravity="center"
         android:orientation="vertical"
@@ -17,11 +9,10 @@
         android:layout_height="match_parent"
         tools:context=".fragment.HomeFragment">
 
-        <TextView
-            android:id="@+id/tvGreetingFragment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{Helper.INSTANCE.convertDateToString(data.date)}" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 
     </LinearLayout>
 </layout>

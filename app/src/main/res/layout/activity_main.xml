@@ -36,7 +36,6 @@
             android:layout_height="wrap_content"/>
 
         <Button
-            android:visibility="@{data.age > 10 ? View.GONE : View.VISIBLE, default=visible}"
             android:text="@string/root_activity"
             android:id="@+id/btnToRootActivity"
             android:layout_width="wrap_content"
